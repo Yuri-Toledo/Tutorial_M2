@@ -1,0 +1,54 @@
+CREATE TABLE Pessoa 
+( 
+ Nome CHAR(n),  
+ Cargo CHAR(n),  
+ Idade INT,  
+ Endereço CHAR(n),  
+ Email CHAR(n),  
+ Contato CHAR(n),  
+ ID_Pessoa INT PRIMARY KEY AUTO_INCREMENT,  
+); 
+
+CREATE TABLE Características 
+( 
+ Característica CHAR(n),  
+ Nota FLOAT DEFAULT '0',  
+ idTa INT,  
+); 
+
+CREATE TABLE Formações 
+( 
+ Instituição CHAR(n),  
+ Tempo VARCHAR(n),  
+ Tipo VARCHAR(n) DEFAULT 'Graduação',  
+ idPessoa INT,  
+); 
+
+CREATE TABLE Experiências 
+( 
+ Instituição VARCHAR(n),  
+ Tempo VARCHAR(n),  
+ Cargo VARCHAR(n),  
+ idPessoa INT,  
+); 
+
+CREATE TABLE Realizações 
+( 
+ Feito VARCHAR(n),  
+ Instituição INT,  
+ Ano INT,  
+ idPessoa INT,  
+); 
+
+CREATE TABLE Habilidades 
+( 
+ Habilidade VARCHAR(n),  
+ Nota FLOAT,  
+ idPessoa INT,  
+); 
+
+ALTER TABLE Características ADD FOREIGN KEY(idTa) REFERENCES Pessoa (idTa)
+ALTER TABLE Formações ADD FOREIGN KEY(idPessoa) REFERENCES Pessoa (idPessoa)
+ALTER TABLE Experiências ADD FOREIGN KEY(idPessoa) REFERENCES Pessoa (idPessoa)
+ALTER TABLE Realizações ADD FOREIGN KEY(idPessoa) REFERENCES Pessoa (idPessoa)
+ALTER TABLE Habilidades ADD FOREIGN KEY(idPessoa) REFERENCES Pessoa (idPessoa)
