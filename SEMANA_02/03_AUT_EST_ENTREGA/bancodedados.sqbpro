@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/Inteli/Documents/inteli/Projetos/Modulo2/Modulo02/Tutorial_M2/SEMANA_02/03_AUT_EST_ENTREGA/bancodedados.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="1453"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,16:mainCaracterísticas"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE Ta 
+( 
+ Nome CHAR(255),  
+ Cargo CHAR(255),  
+ Idade INT,  
+ Endereço CHAR(255),  
+ Email CHAR(255),  
+ Contato CHAR(255),  
+ ID_Pessoa INT PRIMARY KEY
+); 
+
+CREATE TABLE Caracteristicas 
+( 
+ Característica CHAR(255),  
+ Nota FLOAT DEFAULT '0',  
+ idTa INT  
+); 
+
+CREATE TABLE Formacoes 
+( 
+ Instituição CHAR(255),  
+ Tempo VARCHAR(255),  
+ Tipo VARCHAR(255) DEFAULT 'Graduação',  
+ idPessoa INT  
+); 
+
+CREATE TABLE Experiencias 
+( 
+ Instituição VARCHAR(255),  
+ Tempo VARCHAR(255),  
+ Cargo VARCHAR(255),  
+ idPessoa INT  
+); 
+
+CREATE TABLE Realizacoes 
+( 
+ Feito VARCHAR(255),  
+ Instituição INT,  
+ Ano INT,  
+ idPessoa INT  
+); 
+
+CREATE TABLE Habilidades 
+( 
+ Habilidade VARCHAR(255),  
+ Nota FLOAT,  
+ idPessoa INT  
+); 
+
+ALTER TABLE Caracteristicas ADD FOREIGN KEY(idTa) REFERENCES Ta (idTa)
+ALTER TABLE Formacoes ADD FOREIGN KEY(idPessoa) REFERENCES Ta (idPessoa)
+ALTER TABLE Experiencias ADD FOREIGN KEY(idPessoa) REFERENCES Ta (idPessoa)
+ALTER TABLE Realizacoes ADD FOREIGN KEY(idPessoa) REFERENCES Ta (idPessoa)
+ALTER TABLE Habilidades ADD FOREIGN KEY(idPessoa) REFERENCES Ta (idPessoa)
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
