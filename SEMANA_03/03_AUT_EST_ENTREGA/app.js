@@ -6,6 +6,10 @@ const port = 3000;
 const sqlite3 = require('sqlite3').verbose();
 const DBPATH = 'bancodedados.db'; //use o nome que você achar melhor para o banco de dados
 
+app.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});
+
 app.use(express.json());
 app.get('/Formacoes', (req, res) => {
     res.statusCode = 200;
