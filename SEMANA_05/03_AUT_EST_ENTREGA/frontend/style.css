@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+nav {
+    height: 15%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: inline-block;
+}
+
+#eu {
+    width: 20%;
+    margin-top: 5%;
+    margin-left: 39%;
+    margin-right: 39%;
+    border-radius: 220px;
+}
+
+#informacoes {
+    display: block;
+    justify-content: center;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 24%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+#projetos {
+    margin-top: 7%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.projeto {
+    margin-top: 5%;
+}
+
+
+
+#contato {
+    display: flex;
+    justify-content: center;
+}
