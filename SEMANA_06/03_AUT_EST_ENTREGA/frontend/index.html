@@ -85,8 +85,15 @@
   </div>
 
   <script>
-    $("#informacoes").hide().fadeIn(2000)
-
+    $("#informacoes").hide().fadeIn(2000);
+    $("#eu").hover(
+    function(){
+      $(this).fadeOut(500);
+    },
+    function(){
+      $(this).fadeIn(1000);
+    });
+    
   </script>
 
 
