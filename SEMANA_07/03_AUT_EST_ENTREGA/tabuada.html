@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tabuada.css">
     <script src="script.js"></script>
     <title>Tabuada</title>
 </head>
 <body>
 
-    Insira o número da tabuada:
-    <input type="number" id="n1">
-    Insira o início da tabuada:
-    <input type="number" id="n2">
-    Insira o final da tabuada:
-    <input type="number" id="n3">
-
+    <div id="inputs">
+        Insira o número da tabuada:
+        <input type="number" id="n1">
+        Insira o início da tabuada:
+        <input type="number" id="n2">
+        Insira o final da tabuada:
+        <input type="number" id="n3">
+            
+    </div>
     <br>
-    <input type="button" onclick="calcTabuada(n1, n2, n3)" value="CALCULAR">
-    Resultado: <input type="number" id="resultado" value="" readonly>
+    <input type="button" onclick="calcTabuada()" value="CALCULAR">
+
+    <div id="saida"></div>
 
 </body>
 </html>
