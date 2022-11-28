@@ -46,6 +46,7 @@
         <h1>Yuri Toledo, 19</h1>
         <h2>INTELI - Instituto de Tecnologia e Liderança</h2>
     </div>
+    <button onclick="reqAjax()">Ajax</button>
   <div id="projetos">
     <h1>Meus projetos</h1>
 
@@ -93,6 +94,17 @@
     function(){
       $(this).fadeIn(1000);
     });
+    </script>
+
+  <script>
+    function reqAjax() {
+      const xhttp = new XMLHttpRequest()
+      xhttp.onreadystatechange = function {
+        document.getElementById("informacoes").innerHTML += `<h3>Esse texto foi inserido usando Ajax, ou seja, de forma assíncrona, sem comprometer o carregamento da página</h3>`
+      }
+      xhttp.open("GET", "http://127.0.0.1:5501/frontend/index.html")
+      xhttp.send()
+    }
     
   </script>
 
