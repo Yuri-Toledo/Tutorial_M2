@@ -99,8 +99,8 @@
   <script>
     function reqAjax() {
       const xhttp = new XMLHttpRequest()
-      xhttp.onreadystatechange = function {
-        document.getElementById("informacoes").innerHTML += `<h3>Esse texto foi inserido usando Ajax, ou seja, de forma assíncrona, sem comprometer o carregamento da página</h3>`
+      xhttp.onreadystatechange = function() {
+        document.getElementById("informacoes").innerHTML += `<h3>Esse texto foi inserido usando Ajax, ou seja, de forma assíncrona, sem comprometer o carregamento da página</h3>`;
       }
       xhttp.open("GET", "http://127.0.0.1:5501/frontend/index.html")
       xhttp.send()
