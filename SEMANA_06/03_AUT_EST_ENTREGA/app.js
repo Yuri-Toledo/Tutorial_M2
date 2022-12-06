@@ -16,6 +16,16 @@ app.use(express.static("frontend/"));
 /******** CRUD ************/
 app.use(express.json());
 
+function reqAjax() {
+    const xhttp = new XMLHttpRequest()
+    xhttp.onreadystatechange = function() {
+      document.getElementById("informacoes").innerHTML += `<h3>Esse texto foi inserido usando Ajax, ou seja, de forma assíncrona, sem comprometer o carregamento da página</h3>`;
+    }
+    xhttp.open("GET", "http://127.0.0.1:5501/frontend/index.html")
+    xhttp.send()
+}
+  
+
 // Retorna todos registros (é o R do CRUD - Read)
 app.get('/listaCaracteristica', (req, res) => {
     res.statusCode = 200;
